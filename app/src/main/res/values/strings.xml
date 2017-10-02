@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">My Quiz App</string>
+
+    <!--Common-->
+    <string name="button_submit">Done</string>
+    <string name="next_button">Next</string>
+    <string name="score">Score:</string>
+    <string name="final_score">Your Final Score:</string>
+
+    <!--Question 1-->
+    <string name="question_1_label">Question 1</string>
+    <string name="question_1">Root Element of Android Manifest XML is?</string>
+    <string name="question_1_option_1">Manifest</string>
+    <string name="question_1_option_2">Application</string>
+    <string name="question_1_option_3">Activity</string>
+    <string name="question_1_option_4">Android</string>
+
+    <!--Question 2-->
+    <string name="question_2_label">Question 2</string>
+    <string name="question_2">Which of these is a ViewGroup?</string>
+    <string name="question_2_option_1">LinearLayout</string>
+    <string name="question_2_option_2">Button</string>
+    <string name="question_2_option_3">Relative Layout</string>
+    <string name="question_2_option_4">TextView</string>
+
+    <!--Question 3-->
+    <string name="question_3_label">Question 3</string>
+    <string name="question_3">Specify the directory name where XML layout files are stored?</string>
+    <string name="hint_text">Write your answer here</string>
+
+    <!--Question 4-->
+    <string name="question_4_label">Question 4</string>
+    <string name="question_4">Android is a linux based operating system?</string>
+    <string name="question_4_option_1">True</string>
+    <string name="question_4_option_2">False</string>
+
+    <!--Question 5-->
+    <string name="question_5_label">Question 5</string>
+    <string name="question_5">Android was initially developed by?</string>
+    <string name="question_5_option_1">Google Inc.</string>
+    <string name="question_5_option_2">Apple Inc.</string>
+    <string name="question_5_option_3">Microsoft Inc.</string>
+    <string name="question_5_option_4">Android Inc.</string>
+
+    <!--Toast Messages-->
+    <string name="try_again">Try Again</string>
+    <string name="select_an_option">Please select an option and try again</string>
+    <string name="enter_value">Please enter some text and try again</string>
+    <string name="success">Right Answer. Hurray !!!</string>
+
+    <string name="thank_you">Thanyou for participating in this quiz :)</string>
+</resources>
