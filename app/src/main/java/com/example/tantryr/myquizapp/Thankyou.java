@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Thankyou extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.tantryr.myquizapp.MESSAGE";
-    int score = 0;
+    int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +23,12 @@ public class Thankyou extends AppCompatActivity {
     }
 
     private void setScore(){
-        TextView scoreId = (TextView) findViewById(R.id.scoreId);
         String scoreResourceText = getString(R.string.final_score);
-        scoreId.setText( scoreResourceText +" "+score);
+        showToastMessages(scoreResourceText +" "+score);
+    }
+
+    private void showToastMessages(String message){
+        Toast final_score = Toast.makeText(this,message,Toast.LENGTH_LONG);
+        final_score.show();
     }
 }

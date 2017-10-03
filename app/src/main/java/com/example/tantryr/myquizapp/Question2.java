@@ -12,7 +12,8 @@ import android.widget.Toast;
 public class Question2 extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.tantryr.myquizapp.MESSAGE";
-    int score = 0;
+    int score;
+    boolean is_score_given = false;
     int score_incrementer = 10;
 
     @Override
@@ -41,7 +42,7 @@ public class Question2 extends AppCompatActivity {
         CheckBox option4 = (CheckBox) findViewById(R.id.option4);
 
         if(option1.isChecked() || option2.isChecked() || option3.isChecked() || option4.isChecked()){
-            if(option1.isChecked() && option4.isChecked()){
+            if(option1.isChecked() && option4.isChecked() && !option2.isChecked() && !option3.isChecked() ){
                 messageResource = R.string.success;
                 incrementScore();
             }
@@ -56,8 +57,11 @@ public class Question2 extends AppCompatActivity {
     }
 
     private void incrementScore(){
-        score = score + score_incrementer;
-        setScore();
+        if(!is_score_given){
+            score = score + score_incrementer;
+            setScore();
+            is_score_given = true;
+        }
     }
 
     public void showNextQuestion(View view){
@@ -68,7 +72,7 @@ public class Question2 extends AppCompatActivity {
     }
 
     private void showToastMessages(int resource){
-        Toast message = Toast.makeText(this,resource,Toast.LENGTH_LONG);
+        Toast message = Toast.makeText(this,resource,Toast.LENGTH_SHORT);
         message.show();
     }
 }

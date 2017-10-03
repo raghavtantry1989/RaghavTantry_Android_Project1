@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,7 +11,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.tantryr.myquizapp.MESSAGE";
-    int score = 0;
+    int score;
+    boolean is_score_given = false;
     int score_incrementer = 10;
 
     @Override
@@ -49,8 +49,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void incrementScore(){
-        score = score + score_incrementer;
-        setScore();
+        if(!is_score_given){
+            score = score + score_incrementer;
+            setScore();
+            is_score_given = true;
+        }
     }
 
     public void showNextQuestion(View view){

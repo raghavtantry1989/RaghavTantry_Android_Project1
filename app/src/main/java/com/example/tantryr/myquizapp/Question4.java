@@ -11,7 +11,8 @@ import android.widget.Toast;
 public class Question4 extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.tantryr.myquizapp.MESSAGE";
-    int score = 0;
+    int score;
+    boolean is_score_given = false;
     int score_incrementer = 10;
 
     @Override
@@ -52,8 +53,11 @@ public class Question4 extends AppCompatActivity {
     }
 
     private void incrementScore(){
-        score = score + score_incrementer;
-        setScore();
+        if(!is_score_given){
+            score = score + score_incrementer;
+            setScore();
+            is_score_given = true;
+        }
     }
 
     public void showNextQuestion(View view){
@@ -64,7 +68,7 @@ public class Question4 extends AppCompatActivity {
     }
 
     private void showToastMessages(int resource){
-        Toast message = Toast.makeText(this,resource,Toast.LENGTH_LONG);
+        Toast message = Toast.makeText(this,resource,Toast.LENGTH_SHORT);
         message.show();
     }
 }
